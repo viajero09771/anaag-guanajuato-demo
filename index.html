@@ -321,7 +321,7 @@ function coachOpen(){
  const team=coachTeams[i],possible=team.nat.filter(x=>/\(posible\)/i.test(x)),regular=team.nat.filter(x=>!/\(posible\)/i.test(x));
  coachDashboard.hidden=false;
  const clean=x=>String(x).replace(/\s*\(posible\)/ig,'');
- const names=(xs)=>xs.length?'<ul>'+xs.map(n=>'<li>'+clean(n)+(\/\(posible\)/i.test(n)?' · Posible':'')+'</li>').join('')+'</ul>':'<p class="muted">Sin atletas registrados en la relación de clasificación disponible.</p>';
+ const names=(xs)=>xs.length?'<ul>'+xs.map(n=>'<li>'+clean(n)+(/\(posible\)/i.test(n)?' · Posible':'')+'</li>').join('')+'</ul>':'<p class="muted">Sin atletas registrados en la relación de clasificación disponible.</p>';
  coachDashboard.innerHTML='<div class="sectionhead"><h2>Panel del equipo: '+team.name+'</h2><span class="stamp">Sesión de prueba · '+creds.user+'</span></div>'+
  '<div class="kpis"><div class="kpi"><b>'+team.open.length+'</b><span>En relación para Abierto</span></div><div class="kpi"><b>'+regular.length+'</b><span>En relación Nacional, sin «posible»</span></div><div class="kpi"><b>'+possible.length+'</b><span>Posibles Nacional</span></div></div>'+
  '<div class="grid"><div class="card"><h3>Entrenador asociado</h3><p>'+team.coach+'</p><p class="stamp">Según relación compartida, cuando existe; por verificar donde no consta.</p></div>'+
