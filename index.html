@@ -109,9 +109,9 @@ nav button.shop-nav{background:#062b5d;color:#fff;padding:11px 15px}
 <div class="data-toolbar"><label>Buscar equipo<input id="busca-equipo" placeholder="Nombre del club o equipo" autocomplete="off"></label><label>Ordenar por<select id="ordena-medallas"><option value="oro">Más oros</option><option value="total">Más medallas</option><option value="equipo">Nombre del equipo</option></select></label></div>
 <div class="responsive-table"><table><thead><tr><th>#</th><th>Equipo</th><th>🥇 Oro</th><th>🥈 Plata</th><th>🥉 Bronce</th><th>Total</th></tr></thead><tbody id="medallero-lista"></tbody></table></div><p id="medallero-count" class="stamp"></p></div>
 <div id="result-nadadores" class="result-panel hide">
-<div class="data-toolbar"><label>Buscar nombre o equipo<input id="busca-marca" placeholder="Ej. Karla, ELITE-GT, Renata" autocomplete="off"></label><label>Prueba<select id="filtra-prueba"><option value="">Todas las pruebas disponibles</option><option value="100 pecho">100 pecho</option><option value="200 mariposa">200 mariposa</option><option value="50 dorso">50 dorso</option><option value="1500 libre">1500 libre</option></select></label></div>
-<div class="responsive-table"><table><thead><tr><th>Lugar</th><th>Atleta</th><th>Equipo</th><th>Rama / edad</th><th>Prueba</th><th>Marca</th></tr></thead><tbody id="resultados-lista"></tbody></table></div><p id="resultados-count" class="stamp"></p>
-<p class="source-note">Muestra extraída de la memoria de sesión vespertina del sábado 21. El filtro no cubre el total de las 17 páginas. Las marcas con símbolo * en el PDF deben interpretarse según su leyenda original, sin atribuirles automáticamente una clasificación nacional.</p></div>
+<div class="data-toolbar"><label>Buscar nombre o equipo<input id="busca-marca" placeholder="Ej. Karla, ELITE-GT, Renata" autocomplete="off"></label><label>Prueba<select id="filtra-prueba"><option value="">Todas las pruebas disponibles</option><option value="100 pecho">100 pecho</option><option value="200 mariposa">200 mariposa</option><option value="1500 libre">1500 libre</option></select></label></div>
+<div class="responsive-table"><table><thead><tr><th>Lugar</th><th>Atleta</th><th>Equipo</th><th>Rama / edad</th><th>Prueba</th><th>Marca</th></tr></thead><tbody id="resultados-lista"></tbody></table></div><p id="resultados-count" class="stamp"></p><p><a class="doclink" href="memoria-estatal-2026.html">Consultar la transcripción textual de las 17 páginas de la memoria del sábado vespertino ↗</a></p>
+<p class="source-note">Selección de registros cotejada con la memoria de sesión vespertina del sábado 21. El filtro no cubre la totalidad de las 17 páginas. Las marcas con símbolo * en el PDF deben interpretarse según su leyenda original, sin atribuirles automáticamente una clasificación nacional.</p></div>
 <div id="result-competencia" class="result-panel hide"><div class="grid">
 <article class="card"><span class="tag">Convocatoria</span><h3>Campeonato Estatal 11 y mayores CC</h3><p>20 al 22 de noviembre de 2026 · León, Guanajuato. Alberca 25 metros. Categorías infantiles, juveniles y mayores.</p><button class="btn" data-goto="convocatorias">Ver ficha y documentos →</button></article>
 <article class="card"><span class="tag">Sesiones</span><h3>Aflojes y programa</h3><p>Viernes: 14:30. Sábado: 07:00 y 14:30. Domingo: 07:00. Consulta horarios en el módulo correspondiente.</p><button class="btn" data-goto="horarios">Ver aflojes →</button></article>
@@ -199,27 +199,7 @@ const medalRecords=[
 ["Titanes Marinos",1,5,4],["IMSS León",1,4,2],["Jaguares Swim Team",1,3,4],
 ["Swim Horse",1,2,2],["Tiburones Life Sport",1,1,0],["Punto Verde",1,0,0],
 ["Tiburones Negros",0,1,2],["Linces T.M.N. Celaya",0,1,0],["Capuri",0,0,1]];
-const sessionResults=[
-[1,"Carolina Morcelli Brandao","Marmo Nadadores","F 13–14","1500 libre","18:05.93"],
-[2,"Melina Yhoalibeth Chavarin Alfaro","Delfines del Bosque","F 13–14","1500 libre","18:34.74"],
-[1,"Maximiliano Torres Meneses","Orcas AKM","M 15–16","1500 libre","16:52.46"],
-[1,"Renata Vargas Correa","Acuatik Cortazar","F 11–12","100 pecho","1:25.86"],
-[2,"Sol Martinez Hernandez","Delfines del Bosque","F 11–12","100 pecho","1:29.60"],
-[1,"Eli Mabel Alcantar Romo","Swim Team León","F 13–14","100 pecho","1:20.44"],
-[1,"Karla Nabetse Negrete Alcaraz","Élite Club Siglo XXI","F 15–16","100 pecho","1:18.28"],
-[9,"Dafne Joscelin Guevara Banda","Élite Club Siglo XXI","F 15–16","100 pecho","1:27.54"],
-[6,"Constanza Gutiérrez Ordoñez","Élite Club Siglo XXI","F 17–18","100 pecho","1:32.63"],
-[1,"Alejandro Vázquez Domínguez","IMSS León","M 11–12","100 pecho","1:22.99"],
-[7,"Marco Barbosa Ortega","Élite Club Siglo XXI","M 13–14","100 pecho","1:21.16"],
-[13,"Elías Israel Ochoa Sánchez","Élite Club Siglo XXI","M 15–16","100 pecho","1:16.24"],
-[14,"Bruno Vallejo Humblot","Élite Club Siglo XXI","M 15–16","100 pecho","1:17.07"],
-[1,"Paloma Carolina Gasca Rojas","Punto Verde","F 11–12","200 mariposa","2:49.17"],
-[1,"Michelle Carrillo Terán","Swim Team León","F 13–14","200 mariposa","2:35.33"],
-[4,"Victoria Gutiérrez Ordoñez","Élite Club Siglo XXI","F 19+","200 mariposa","2:36.41"],
-[1,"Renata Vargas Correa","Acuatik Cortazar","F 11–12","50 dorso","34.50"],
-[1,"Alejandro Aguilar Torres","Swim Team León","M 11–12","50 dorso","33.99"],
-[10,"Mauro Valencia Mendoza","Élite Club Siglo XXI","M 11–12","50 dorso","40.72"]
-];
+const sessionResults=[[1,"Carolina Morcelli Brandao","Marmo Nadadores","F 14","1500 libre","18:05.93"],[2,"Melina Yhoalibeth Chavarin Alfaro","Delfines del Bosque","F 14","1500 libre","18:34.74"],[1,"Biaani Yerine Mendoza Segura","Orcas AKM","F 15","1500 libre","19:04.38"],[1,"Maximiliano Torres Meneses","Orcas AKM","M 16","1500 libre","16:52.46"],[1,"Luis Ugarte León","Dragones Marinos Novaera","M 13","1500 libre","18:11.96"],[1,"Renata Vargas Correa","Acuatik Cortazar","F 12","100 pecho","1:25.86"],[2,"Sol Martínez Hernández","Delfines del Bosque","F 11","100 pecho","1:29.60"],[1,"Eli Mabel Alcantar Romo","Swim Team León","F 13","100 pecho","1:20.44"],[1,"Karla Nabetse Negrete Alcaraz","Élite Club Siglo XXI","F 16","100 pecho","1:18.28"],[9,"Dafne Joscelin Guevara Banda","Élite Club Siglo XXI","F 16","100 pecho","1:27.54"],[6,"Constanza Gutiérrez Ordoñez","Élite Club Siglo XXI","F 17","100 pecho","1:32.63"],[7,"Marco Barbosa Ortega","Élite Club Siglo XXI","M 14","100 pecho","1:21.16"],[13,"Elías Israel Ochoa Sánchez","Élite Club Siglo XXI","M 15","100 pecho","1:16.24"],[14,"Bruno Vallejo Humblot","Élite Club Siglo XXI","M 16","100 pecho","1:17.07"],[1,"Atzin Yazid Solano De La Riva","Marmo Nadadores","M 18","100 pecho","1:05.42"],[1,"Mariana Hernández López","Comude León","F 19","100 pecho","1:16.17"],[1,"Alejandro Vázquez Domínguez","IMSS León","M 12","100 pecho","1:22.99"],[1,"Gustavo Ortiz Padilla","Comude León","M 23","100 pecho","1:06.23"],[2,"Alan Daniel Naranjo Carballeda","Orcas AKM","M 21","100 pecho","1:06.56"],[1,"Paloma Carolina Gasca Rojas","Punto Verde","F 12","200 mariposa","2:49.17"],[1,"Michelle Carrillo Terán","Swim Team León","F 14","200 mariposa","2:35.33"],[2,"Ana Ávila López","Dragones Marinos Novaera","F 13","200 mariposa","2:35.66"],[1,"Danna Camila García Hernández","Swim Team León","F 17","200 mariposa","2:25.32"],[4,"Victoria Gutiérrez Ordoñez","Élite Club Siglo XXI","F 19","200 mariposa","2:36.41"]];
 function normalizeSearch(s){return s.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g,"")}
 function renderMedals(){
  const q=normalizeSearch(document.querySelector("#busca-equipo").value.trim());
