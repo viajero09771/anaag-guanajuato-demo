@@ -37,6 +37,24 @@ nav button.shop-nav{background:#062b5d;color:#fff;padding:11px 15px}
 .demo-flag{display:inline-block;color:#06606b;background:#e0f8fb;border-radius:99px;padding:6px 10px;font-size:11px;font-weight:800}
 @media(max-width:1050px){.section-cards{grid-template-columns:repeat(2,1fr)}.home-categories{grid-template-columns:repeat(2,1fr)}.top{flex-wrap:wrap}.top nav{width:100%;justify-content:flex-start;overflow:auto;flex-wrap:nowrap}}
 @media(max-width:600px){.section-cards,.home-categories{grid-template-columns:1fr}.partners{grid-template-columns:repeat(2,minmax(0,1fr))}.sport-intro{padding:22px}.coach-floating{left:10px;bottom:9px;font-size:12px;padding:10px 13px}body{padding-bottom:65px}.category-card{padding:17px}.partnerbar{padding:20px 0}}
+
+/* Módulos Swimcloud + asociaciones estatales */
+.result-tabs{display:flex;gap:10px;flex-wrap:wrap;margin:12px 0 17px}
+.result-tabs button{background:#fff;border:1px solid #bfd9e6;color:#09335e;padding:11px 17px;border-radius:13px;font-weight:800}
+.result-tabs button.on{background:#063a70;color:white;border-color:#063a70}
+.data-toolbar{display:flex;gap:12px;flex-wrap:wrap;align-items:flex-end;margin:15px 0}.data-toolbar label{flex:1;min-width:180px}
+.data-toolbar input,.data-toolbar select{display:block;width:100%;padding:11px;border:1px solid #b7d0de;border-radius:10px;background:white;margin-top:5px}
+.responsive-table{overflow:auto;border:1px solid #d8e5ef;border-radius:14px;background:white}
+.responsive-table th{position:sticky;top:0;background:#e8f8fc;color:#042b56;white-space:nowrap}.responsive-table td{white-space:nowrap}
+.responsive-table tbody tr:nth-child(even){background:#f4fafd}.responsive-table tbody tr:hover{background:#e1f8f9}
+.kpi-board{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:13px;margin:19px 0}
+.kpi-board>div{background:#fff;border:1px solid #d1e4ed;border-radius:14px;padding:18px}
+.kpi-board strong{display:block;font-size:28px;color:#035e93}.kpi-board span{display:block;font-size:12px;color:#5b6b84}
+.source-note{background:#fff5df;border-left:4px solid #c48223;padding:14px;border-radius:8px;font-size:13px;line-height:1.6;margin:14px 0}
+.training-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:15px}
+.training-item{background:white;border:1px solid #d1e3ed;border-radius:15px;padding:19px}.training-item small{color:#008c9a;font-weight:900}
+.training-item h3{margin:8px 0}.training-item p{font-size:13px;line-height:1.6;color:#52677b}
+.link-chips{display:flex;gap:8px;flex-wrap:wrap;margin:16px 0}.link-chips a{border:1px solid #b7dce7;background:white;padding:9px 12px;border-radius:12px;text-decoration:none;font-size:12px;font-weight:800}
 </style></head>
 <body>
 <header><div class="wrap top"><div class="brand" aria-label="ANAAG Guanajuato">
@@ -59,13 +77,42 @@ nav button.shop-nav{background:#062b5d;color:#fff;padding:11px 15px}
 <div class="sectionhead"><h2>Patrocinios e identidad</h2></div><div class="card"><p>Sección preparada para mostrar patrocinadores aprobados, convenios y productos institucionales. Las marcas comerciales solo se publicarán con autorización.</p></div></section>
 <section class="page" id="convocatorias"><div class="sectionhead"><h2>Convocatorias y documentos</h2></div><div class="notice">Fechas transcritas de las convocatorias compartidas. Los documentos oficiales se incorporarán para descarga cuando estén publicados y autorizados.</div><div class="grid" id="docs"></div></section>
 <section class="page" id="horarios"><div class="sectionhead"><h2>Aflojes y programa</h2></div><div class="card"><h3>Estatal Guanajuato 11 años y mayores CC 2026</h3><p class="muted">20–22 noviembre · León · Centro Acuático Impulso</p><table><thead><tr><th>Fecha</th><th>Afloje</th><th>Competencia</th></tr></thead><tbody><tr><td>Viernes 20</td><td>14:30</td><td>16:00</td></tr><tr><td>Sábado 21 (mañana)</td><td>07:00</td><td>08:30</td></tr><tr><td>Sábado 21 (tarde)</td><td>14:30</td><td>16:00</td></tr><tr><td>Domingo 22</td><td>07:00</td><td>08:30</td></tr></tbody></table><p class="small muted">Horarios establecidos en la convocatoria del Estatal 2026. Los horarios particulares por nadador y carril requieren programa de competencia actualizado.</p></div></section>
-<section class="page" id="resultados"><div class="sectionhead"><h2>Resultados, rosters y seguimiento</h2></div><div class="grid"><div class="card"><h3>Consulta por nadador</h3><p>En la versión oficial se podrá buscar prueba, categoría, equipo, marca y lugar. La carga de resultados requiere su validación antes de publicar.</p><input class="field" placeholder="Buscar nadador (demo sin datos personales)" aria-label="Buscar nadador"><p class="stamp">Esta demostración no publica rosters nominativos de menores.</p></div><div class="card"><h3>Medallero y rankings</h3><p>Tablero futuro por pruebas, equipos y categorías, separado de las métricas oficiales de federación.</p><button class="btn" data-goto="marcas">Revisar tiempos tope</button></div><div class="card"><h3>Área de entrenador</h3><p>Listado de tareas: avales, afiliación, revisión de inscripciones, reuniones previas, orden de eventos y relevos.</p><button class="btn" data-goto="portal">Abrir panel</button></div></div></section>
-<section class="page" id="marcas"><div class="sectionhead"><h2>Tiempos tope y elegibilidad</h2></div><div class="notice"><strong>Importante:</strong> un tiempo alcanzado no equivale a clasificación oficial. Se deben comprobar rama, edad, curso, periodo válido, aval del resultado, afiliación y reglas de cada convocatoria. El comparador de abajo es una simulación con una marca de referencia, no la tabla completa.</div>
+<section class="page" id="resultados"><div class="sectionhead"><h2>Resultados y estadísticas · Estatal Guanajuato 2026</h2><span class="stamp">HY-TEK Meet Manager 8.0 · 25 m</span></div>
+<div class="notice"><strong>Campeonato Estatal 11 años y mayores · Curso Corto</strong><br>20–22 noviembre de 2026 · Centro Acuático Impulso, León. Panel inspirado en Swimcloud: medallero por equipo, búsqueda por nadador y resultados por prueba.</div>
+<div class="source-note"><strong>Datos parciales:</strong> el cuadro de medallas representa únicamente las tres primeras sesiones (21/11/2026 a las 19:43). Los resultados individuales mostrados pertenecen al informe de la sesión vespertina del sábado 21. No son el cierre oficial del campeonato. La memoria original contiene más resultados que los ejemplos consultables aquí.</div>
+<div class="kpi-board"><div><strong>71</strong><span>Medallas · Swim Team León</span></div><div><strong>57</strong><span>Medallas · Marmo Nadadores</span></div><div><strong>40</strong><span>Medallas · Orcas AKM</span></div><div><strong>10</strong><span>Medallas · Élite Club Siglo XXI</span></div></div>
+<div class="result-tabs"><button class="on" data-result-tab="medallas">🏅 Medallero por equipo</button><button data-result-tab="nadadores">🏊 Resultados individuales</button><button data-result-tab="competencia">📅 Ficha de competencia</button></div>
+<div id="result-medallas" class="result-panel">
+<div class="data-toolbar"><label>Buscar equipo<input id="busca-equipo" placeholder="Nombre del club o equipo" autocomplete="off"></label><label>Ordenar por<select id="ordena-medallas"><option value="oro">Más oros</option><option value="total">Más medallas</option><option value="equipo">Nombre del equipo</option></select></label></div>
+<div class="responsive-table"><table><thead><tr><th>#</th><th>Equipo</th><th>🥇 Oro</th><th>🥈 Plata</th><th>🥉 Bronce</th><th>Total</th></tr></thead><tbody id="medallero-lista"></tbody></table></div><p id="medallero-count" class="stamp"></p></div>
+<div id="result-nadadores" class="result-panel hide">
+<div class="data-toolbar"><label>Buscar nombre o equipo<input id="busca-marca" placeholder="Ej. Karla, ELITE-GT, Renata" autocomplete="off"></label><label>Prueba<select id="filtra-prueba"><option value="">Todas las pruebas disponibles</option><option value="100 pecho">100 pecho</option><option value="200 mariposa">200 mariposa</option><option value="50 dorso">50 dorso</option><option value="1500 libre">1500 libre</option></select></label></div>
+<div class="responsive-table"><table><thead><tr><th>Lugar</th><th>Atleta</th><th>Equipo</th><th>Rama / edad</th><th>Prueba</th><th>Marca</th></tr></thead><tbody id="resultados-lista"></tbody></table></div><p id="resultados-count" class="stamp"></p>
+<p class="source-note">Muestra extraída de la memoria de sesión vespertina del sábado 21. El filtro no cubre el total de las 17 páginas. Las marcas con símbolo * en el PDF deben interpretarse según su leyenda original, sin atribuirles automáticamente una clasificación nacional.</p></div>
+<div id="result-competencia" class="result-panel hide"><div class="grid">
+<article class="card"><span class="tag">Convocatoria</span><h3>Campeonato Estatal 11 y mayores CC</h3><p>20 al 22 de noviembre de 2026 · León, Guanajuato. Alberca 25 metros. Categorías infantiles, juveniles y mayores.</p><button class="btn" data-goto="convocatorias">Ver ficha y documentos →</button></article>
+<article class="card"><span class="tag">Sesiones</span><h3>Aflojes y programa</h3><p>Viernes: 14:30. Sábado: 07:00 y 14:30. Domingo: 07:00. Consulta horarios en el módulo correspondiente.</p><button class="btn" data-goto="horarios">Ver aflojes →</button></article>
+<article class="card"><span class="tag">Clasificación</span><h3>Tiempos a Nacional / Abierto</h3><p>Comparador de marcas y bases de elegibilidad por categoría, rama, periodo válido y curso de alberca.</p><button class="btn" data-goto="marcas">Consultar requisitos →</button></article>
+</div></div></section><section class="page" id="marcas"><div class="sectionhead"><h2>Tiempos tope y elegibilidad</h2></div><div class="notice"><strong>Importante:</strong> un tiempo alcanzado no equivale a clasificación oficial. Se deben comprobar rama, edad, curso, periodo válido, aval del resultado, afiliación y reglas de cada convocatoria. El comparador de abajo es una simulación con una marca de referencia, no la tabla completa.</div>
 <div class="grid"><div class="card"><h3>Simulador: 50 m libre</h3><label for="categoria">Competencia</label><select class="field" id="categoria"><option value="nacional">Nacional Curso Corto 2026</option><option value="abierto">Abierto Mexicano CC 2026</option></select><label for="rama">Rama</label><select class="field" id="rama"><option value="f">Femenil</option><option value="m">Varonil</option></select><label for="tiempo">Tiempo del nadador (segundos)</label><input class="field" type="number" id="tiempo" min="15" max="120" step=".01" value="28.50"><button class="btn" id="comparar">Comparar con referencia</button><div id="comparacion" class="result" aria-live="polite">Selecciona los datos para ver un ejemplo.</div></div><div class="card"><h3>Nacional Curso Corto</h3><p>18–21 diciembre de 2026. Las marcas oficiales deben cumplir el periodo del 24 de noviembre de 2025 al 22 de noviembre de 2026, además de las bases de la convocatoria.</p><p><strong>Regla bonus:</strong> con una prueba acreditada se permiten hasta 4 inscripciones; con dos o más, hasta 6, según requisitos.</p><p class="stamp">Categorías 12, 13–14, 15–16, 17–18 y 19–21 años.</p></div><div class="card"><h3>Abierto Mexicano</h3><p>14–17 diciembre de 2026. Categoría primera fuerza, desde los 13 años.</p><p>Pruebas, finales y criterios independientes del Nacional. No se mezclan ambas tablas.</p></div></div></section>
 <section class="page" id="clubes"><div class="sectionhead"><h2>Equipos afiliados</h2></div><div class="notice">Directorio demostrativo. La afiliación oficial y los permisos de publicación de logos están pendientes de validación.</div><div class="grid"><div class="card"><h3>Élite Club Siglo XXI</h3><p>Irapuato · Referencia de participación en el Campeonato Estatal 2026.</p></div><div class="card"><h3>Clubes de Guanajuato</h3><p>El directorio definitivo mostrará clubes, municipio, responsables, categorías y enlace institucional, tras aprobación.</p></div></div></section>
 <section class="page" id="portal"><div class="sectionhead"><h2>Mi portal · Acceso de prueba</h2></div><div class="notice">El folio <strong>DEMO-001</strong> solo muestra información ficticia. Los expedientes reales de menores requerirán verificación de identidad y consentimiento de tutores; un folio aislado nunca será una contraseña segura.</div><div class="grid"><div class="card"><h3>Simulación de acceso</h3><label for="perfil">Perfil</label><select class="field" id="perfil"><option>Nadador o tutor</option><option>Entrenador</option><option>Club</option></select><label for="folio">Folio de prueba</label><input class="field" id="folio" placeholder="DEMO-001"><button class="btn" id="entrar">Consultar demo</button><div id="perfilresultado" class="result" aria-live="polite">No hay sesión activa.</div></div><div class="card"><h3>Panel informativo del entrenador</h3><ul><li>Estado de afiliación y aval: pendiente de validación oficial</li><li>Lista de competencias y fechas</li><li>Inscripciones y orden de eventos</li><li>Seguimiento de marcas, relevos y cuotas</li><li>Comunicaciones con padres y tutores</li></ul></div></div></section>
 <section class="page" id="tienda"><div class="sectionhead"><h2>Tienda ANAAG · Demo</h2></div><div class="notice">Precios, productos y carrito ilustrativos. No se realizan pedidos ni cargos reales.</div><div class="grid" id="productos"></div><div class="card" style="margin-top:18px"><h3>Carrito de compra (<span id="items">0</span>)</h3><div id="carrito" aria-live="polite">Carrito vacío.</div><p><strong>Total demostrativo: $<span id="total">0</span> MXN</strong></p><button class="btn" id="vaciar">Vaciar carrito</button></div></section>
-<section class="page" id="capacitacion"><div class="sectionhead"><h2>Capacitación y evaluación del proyecto</h2></div><div class="grid"><div class="card"><span class="tag">1 · Directivos</span><h3>Contenido institucional</h3><p>Revisar identidad ANAAG, convocatorias, patrocinios, políticas y canales oficiales.</p></div><div class="card"><span class="tag">2 · Entrenadores</span><h3>Seguimiento de deportistas</h3><p>Explicar tiempos tope, periodos válidos, documentación y verificación oficial.</p></div><div class="card"><span class="tag">3 · Familias</span><h3>Información del nadador</h3><p>Comprender cómo consultar marcas, competencias y avances sin divulgar datos privados.</p></div><div class="card"><span class="tag">4 · Administración</span><h3>Publicación y mantenimiento</h3><p>Validación de documentos, respaldo de datos y separación entre contenido público y privado.</p></div></div><div class="card" style="margin-top:18px"><h3>Evaluación recomendada</h3><p>Probar menú, filtros, formularios, carrito y visualización móvil. Registrar cambios requeridos antes de incorporar usuarios y cobros reales.</p></div></section>
+<section class="page" id="capacitacion"><div class="sectionhead"><h2>Capacitación · Centro de recursos para entrenadores</h2></div>
+<div class="notice">Área institucional inspirada en AMDETNA. Los recursos se presentan como rutas de estudio y propuestas de formación; no se anuncian cursos o certificaciones disponibles sin confirmación.</div>
+<div class="training-grid">
+<div class="training-item"><small>FORMACIÓN 01</small><h3>Reglamento World Aquatics</h3><p>Actualización técnica, salidas, virajes, pruebas y criterios de descalificación.</p></div>
+<div class="training-item"><small>FORMACIÓN 02</small><h3>Meet Manager y Team Manager</h3><p>Carga de inscripciones, revisión de roster, marcas, series, carriles y reportes de resultados.</p></div>
+<div class="training-item"><small>FORMACIÓN 03</small><h3>Planificación deportiva</h3><p>Periodización, distribución de cargas, sesiones por objetivos, pruebas de control y seguimiento de atletas.</p></div>
+<div class="training-item"><small>FORMACIÓN 04</small><h3>Aguas abiertas y seguridad</h3><p>Organización de competencias, orientación, hidratación y protocolos de seguridad en aguas abiertas.</p></div>
+<div class="training-item"><small>FORMACIÓN 05</small><h3>Desarrollo infantil y protección</h3><p>Comunicación con familias, progresión deportiva y protección de menores.</p></div>
+<div class="training-item"><small>FORMACIÓN 06</small><h3>Clasificación y selección</h3><p>Interpretar convocatorias, fechas de marca válida, afiliación, pruebas bonus y selección estatal.</p></div></div>
+<div class="sectionhead"><h2>Plataformas de referencia</h2></div><div class="link-chips">
+<a href="https://www.swimcloud.com/" target="_blank" rel="noopener">Swimcloud · estadísticas ↗</a>
+<a href="https://apn.org.mx/" target="_blank" rel="noopener">Asociación Poblana · competencias ↗</a>
+<a href="https://anenl.org/" target="_blank" rel="noopener">Nuevo León · disciplinas ↗</a>
+<a href="https://sites.google.com/view/amdetna/inicio" target="_blank" rel="noopener">AMDETNA · recursos técnicos ↗</a>
+</div><div class="card"><h3>Capacitación y concentraciones de Guanajuato</h3><p>Sección preparada para publicar convocatorias a concentraciones, integrantes de selección, cuerpo técnico y archivos de capacitación tras su autorización oficial.</p><button class="btn" data-goto="entrenador">Ir al panel del entrenador →</button></div></section>
 <section class="page" id="natacion">
 <div class="sport-intro"><span class="demo-flag">Área deportiva · prototipo</span><h2>🏊 Natación</h2><p>Curso corto y largo. Convocatorias, resultados, marcas tope y seguimiento de los nadadores de Guanajuato.</p></div>
 <div class="sectionhead"><h2>Información de natación</h2><span class="stamp">Eventos · Resultados · Galerías · Atletas</span></div>
@@ -101,4 +148,54 @@ document.querySelector("#comparar").addEventListener("click",()=>{let c=document
 document.querySelector("#entrar").addEventListener("click",()=>{let el=document.querySelector("#perfilresultado"),v=document.querySelector("#folio").value.trim();el.innerHTML=v==="DEMO-001"?"<strong>Perfil ficticio habilitado</strong><br>Afiliación: demostración<br>Tiempo tope: por verificar<br>Clasificación: no confirmada<br>Consulta de pruebas y avisos disponible en la futura versión.":"Usa el folio de prueba DEMO-001. No existe acceso a datos personales reales.";});
 const products=[["Gorra de natación ANAAG",180],["Playera institucional ANAAG",390],["Termo deportivo",250],["Bolsa de entrenamiento",520]],cart={};function renderCart(){let keys=Object.keys(cart).filter(k=>cart[k]>0),n=0,total=0;document.querySelector("#carrito").innerHTML=keys.length?keys.map(k=>{let p=products[Number(k)];n+=cart[k];total+=p[1]*cart[k];return '<div class="cartrow"><span>'+p[0]+' × '+cart[k]+'</span><span><button aria-label="Quitar una unidad" data-less="'+k+'">−</button> $'+(p[1]*cart[k])+' <button aria-label="Agregar una unidad" data-more="'+k+'">+</button></span></div>'}).join(""):"Carrito vacío.";document.querySelector("#items").textContent=n;document.querySelector("#cartcount").textContent=n;document.querySelector("#total").textContent=total;document.querySelectorAll("[data-more]").forEach(e=>e.onclick=()=>{cart[e.dataset.more]++;renderCart()});document.querySelectorAll("[data-less]").forEach(e=>e.onclick=()=>{cart[e.dataset.less]--;renderCart()})}
 document.querySelector("#productos").innerHTML=products.map(([n,p],i)=>'<article class="card"><span class="tag">Producto ilustrativo</span><h3>'+n+'</h3><p>$'+p+' MXN</p><button class="btn storebutton" data-buy="'+i+'">Agregar al carrito</button></article>').join("");document.querySelectorAll("[data-buy]").forEach(e=>e.onclick=()=>{let k=e.dataset.buy;cart[k]=(cart[k]||0)+1;renderCart()});document.querySelector("#vaciar").onclick=()=>{Object.keys(cart).forEach(k=>delete cart[k]);renderCart()};
+
+const medalRecords=[
+["Swim Team León",26,23,22],["Marmo Nadadores",23,14,20],["Orcas AKM",17,17,6],
+["Dragones Marinos Novaera",9,19,13],["Hydrus Acuática",8,7,11],["Acuática Rueda",8,4,8],
+["Delfines del Bosque",7,17,10],["Iswam Aquatics",6,4,2],["Rayas AD Celaya",6,1,4],
+["Acuatik Cortazar",6,0,0],["Club Acuático Nereus",4,5,2],["Comude León",3,3,6],
+["Club Deportivo Potosino",3,0,1],["Élite Club Siglo XXI",2,4,4],["ANV León",2,0,4],
+["Titanes Marinos",1,5,4],["IMSS León",1,4,2],["Jaguares Swim Team",1,3,4],
+["Swim Horse",1,2,2],["Tiburones Life Sport",1,1,0],["Punto Verde",1,0,0],
+["Tiburones Negros",0,1,2],["Linces T.M.N. Celaya",0,1,0],["Capuri",0,0,1]];
+const sessionResults=[
+[1,"Carolina Morcelli Brandao","Marmo Nadadores","F 13–14","1500 libre","18:05.93"],
+[2,"Melina Yhoalibeth Chavarin Alfaro","Delfines del Bosque","F 13–14","1500 libre","18:34.74"],
+[1,"Maximiliano Torres Meneses","Orcas AKM","M 15–16","1500 libre","16:52.46"],
+[1,"Renata Vargas Correa","Acuatik Cortazar","F 11–12","100 pecho","1:25.86"],
+[2,"Sol Martinez Hernandez","Delfines del Bosque","F 11–12","100 pecho","1:29.60"],
+[1,"Eli Mabel Alcantar Romo","Swim Team León","F 13–14","100 pecho","1:20.44"],
+[1,"Karla Nabetse Negrete Alcaraz","Élite Club Siglo XXI","F 15–16","100 pecho","1:18.28"],
+[9,"Dafne Joscelin Guevara Banda","Élite Club Siglo XXI","F 15–16","100 pecho","1:27.54"],
+[6,"Constanza Gutiérrez Ordoñez","Élite Club Siglo XXI","F 17–18","100 pecho","1:32.63"],
+[1,"Alejandro Vázquez Domínguez","IMSS León","M 11–12","100 pecho","1:22.99"],
+[7,"Marco Barbosa Ortega","Élite Club Siglo XXI","M 13–14","100 pecho","1:21.16"],
+[13,"Elías Israel Ochoa Sánchez","Élite Club Siglo XXI","M 15–16","100 pecho","1:16.24"],
+[14,"Bruno Vallejo Humblot","Élite Club Siglo XXI","M 15–16","100 pecho","1:17.07"],
+[1,"Paloma Carolina Gasca Rojas","Punto Verde","F 11–12","200 mariposa","2:49.17"],
+[1,"Michelle Carrillo Terán","Swim Team León","F 13–14","200 mariposa","2:35.33"],
+[4,"Victoria Gutiérrez Ordoñez","Élite Club Siglo XXI","F 19+","200 mariposa","2:36.41"],
+[1,"Renata Vargas Correa","Acuatik Cortazar","F 11–12","50 dorso","34.50"],
+[1,"Alejandro Aguilar Torres","Swim Team León","M 11–12","50 dorso","33.99"],
+[10,"Mauro Valencia Mendoza","Élite Club Siglo XXI","M 11–12","50 dorso","40.72"]
+];
+function normalizeSearch(s){return s.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g,"")}
+function renderMedals(){
+ const q=normalizeSearch(document.querySelector("#busca-equipo").value.trim());
+ const sort=document.querySelector("#ordena-medallas").value;
+ let list=medalRecords.filter(a=>normalizeSearch(a[0]).includes(q));
+ list.sort((a,b)=>sort==="equipo"?a[0].localeCompare(b[0],"es"):sort==="total"?(b[1]+b[2]+b[3])-(a[1]+a[2]+a[3]):b[1]-a[1]||b[2]-a[2]||b[3]-a[3]);
+ document.querySelector("#medallero-lista").innerHTML=list.map((x,i)=>"<tr><td>"+(i+1)+"</td><td><b>"+x[0]+"</b></td><td>"+x[1]+"</td><td>"+x[2]+"</td><td>"+x[3]+"</td><td><b>"+(x[1]+x[2]+x[3])+"</b></td></tr>").join("");
+ document.querySelector("#medallero-count").textContent=list.length+" equipos · corte tras 3 sesiones, no resultado final";
+}
+function renderSession(){
+ const q=normalizeSearch(document.querySelector("#busca-marca").value.trim()),pr=document.querySelector("#filtra-prueba").value;
+ let list=sessionResults.filter(x=>(!pr||x[4]===pr)&&normalizeSearch(x[1]+" "+x[2]).includes(q));
+ document.querySelector("#resultados-lista").innerHTML=list.map(x=>"<tr><td>"+x[0]+"</td><td><b>"+x[1]+"</b></td><td>"+x[2]+"</td><td>"+x[3]+"</td><td>"+x[4]+"</td><td><b>"+x[5]+"</b></td></tr>").join("");
+ document.querySelector("#resultados-count").textContent=list.length+" registros de muestra · sábado 21 vespertino";
+}
+document.querySelectorAll("[data-result-tab]").forEach(btn=>btn.addEventListener("click",()=>{document.querySelectorAll("[data-result-tab]").forEach(b=>b.classList.toggle("on",b===btn));["medallas","nadadores","competencia"].forEach(t=>document.querySelector("#result-"+t).classList.toggle("hide",t!==btn.dataset.resultTab));}));
+["busca-equipo","ordena-medallas"].forEach(id=>document.querySelector("#"+id).addEventListener("input",renderMedals));
+["busca-marca","filtra-prueba"].forEach(id=>document.querySelector("#"+id).addEventListener("input",renderSession));
+renderMedals();renderSession();
 </script></body></html>
